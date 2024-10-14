@@ -14,7 +14,7 @@ $(document).ready(function(){
         const enderecoNovaImagem = $('#endereco-img-nova').val();
         const novoItem = $('<li style = "display: none;"></li>');
         $(`<img src="${enderecoNovaImagem}")></img>`).appendTo(novoItem)
-        //coloca a imagem com o endereço dentro do novo idem
+        // coloca a imagem com o endereço dentro do novo idem
         $(`
             <div class="overlay-image-link">
                 <a href="${enderecoNovaImagem}" target="_blank" title="Imagem em tamanho real">
@@ -22,8 +22,11 @@ $(document).ready(function(){
                 </a>
             </div>
         `).appendTo(novoItem);
+        // coloca o link da nova imagem
         $(novoItem).appendTo('ul');
-        $(novoItem).fadeIn(500);
+        $(novoItem).fadeIn(1000);
         $('endereco-img-nova').val('')
     })
 })
+
+// O código está com bug ao adicionar as url de imagens
